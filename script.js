@@ -3,12 +3,10 @@ const criptografar = () => {
   let text = textCriptografia.value;
 
   let nenhumaMensagem = document.querySelector(".resultado");
-  let divCopy = document.querySelector("para-copiar")
   nenhumaMensagem.removeChild(nenhumaMensagem.lastChild);
 
   let button = document.createElement("button");
   button.textContent = "Copiar";
-
   button.style.backgroundColor = "#0a3871";
   button.style.border = "none";
   button.style.outline = "none";
@@ -24,9 +22,9 @@ const criptografar = () => {
   button.addEventListener("click", () => {
     let textoParaCopiar = document.createElement("textarea");
     textoParaCopiar.value = nenhumaMensagem.textContent;
-    document.body.appendChild(textoParaCopiar)
+    document.body.appendChild(textoParaCopiar);
     textoParaCopiar.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(textoParaCopiar);
   });
 
@@ -57,9 +55,15 @@ const descriptografar = () => {
   button.style.fontSize = "18px";
   button.style.borderRadius = "24px";
   button.style.cursor = "pointer";
+  button.style.marginTop = "150%";
 
   button.addEventListener("click", () => {
-    console.log("clicou");
+    let textoParaCopiar = document.createElement("textarea");
+    textoParaCopiar.value = nenhumaMensagem.textContent;
+    document.body.appendChild(textoParaCopiar);
+    textoParaCopiar.select();
+    document.execCommand("copy");
+    document.body.removeChild(textoParaCopiar);
   });
 
   text = text.replace(/enter/g, "e");

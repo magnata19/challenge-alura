@@ -1,7 +1,6 @@
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   height: 100vh;
   width: 100vw;
 }
@@ -23,7 +22,7 @@ body {
   background-color: #f3f5fc;
   margin: 120px 0 0 0;
   font-size: 32px;
-  color: #0A3871;
+  color: #0a3871;
   line-height: 48px;
   font-weight: 400;
 }
@@ -47,7 +46,7 @@ body {
 }
 
 .paragrafo p img {
-  margin-right: px;
+  margin-right: 10px;
 }
 
 .btn {
@@ -66,8 +65,7 @@ body {
   font-size: 16px;
   color: #fff;
   border-radius: 24px;
-  transition: all .3s;
-
+  transition: all 0.3s;
 }
 
 .btnd {
@@ -81,7 +79,7 @@ body {
   font-size: 16px;
   color: #0a3871;
   border-radius: 24px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .btnc:hover {
@@ -108,24 +106,6 @@ body {
   font-size: 32px;
 }
 
-#copiar {
-  width: 70%;
-  margin: 0 auto;
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-  background-color: #0a3871;
-  color: #fff;
-  font-size: 15px;
-  border-radius: 24px;
-  display: none;
-  }
-
-#copiar:hover {
-  background-color: #08274e;
-  transition: all .3s;
-  cursor: pointer;
-}
 
 .resultado-imagem {
   display: flex;
@@ -133,7 +113,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .resultado-imagem h2 {
@@ -151,4 +132,82 @@ body {
   width: 60%;
   color: #495057;
   text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .criptografia textarea {
+    resize: none;
+    width: 380px;
+    height: 60%;
+    outline: none;
+    border: none;
+    background-color: #f3f5fc;
+    margin-top: 20px;
+    font-size: 32px;
+    color: #0a3871;
+    line-height: 48px;
+    font-weight: 400;
+  }
+  
+  .btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnc {
+   margin-bottom: 10px;
+  }
+
+  .resultado {
+    width: 380px;
+    height: 85%;
+  }
+
+  @media (max-width: 850px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .criptografia {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .criptografia textarea {
+      max-width: 100%;
+      height: 90%;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btnc {
+      padding: 5px 10px;
+      max-width: 100%;
+    }
+
+    .btnd {
+      max-width: 100%;
+    }
+  
+    .logo {
+      margin: 0;
+    }
+
+    .resultado{
+      margin: 0 auto;
+      margin-top: 200px;
+      max-width:90%;
+    }
+
+    .resultado-imagem {
+      display: none;
+    }
+  }
 }
