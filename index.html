@@ -8,30 +8,45 @@
     <title>Alura - Criptografia</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-principal">
       <div class="logo">
         <img src="assets/Frame 6.png" alt="" />
       </div>
-      <div class="criptografia">
-        <textarea placeholder="Digite seu texto" id="criptografar-text"></textarea>
-        <div class="paragrafo">
-          <p>
-            <img src="assets/bi_exclamation-circle-fill.png" />Apenas letras
-            minúsculas e sem acento.
-          </p>
+      <div class="container">
+        <div class="criptografia">
+          <textarea
+            placeholder="Digite seu texto"
+            id="criptografar-text"
+          ></textarea>
+          <div class="paragrafo">
+            <p>
+              <img src="assets/bi_exclamation-circle-fill.png" />Apenas letras
+              minúsculas e sem acento.
+            </p>
+          </div>
+          <div class="btn">
+            <button class="btnc" onclick="criptografar()">Criptografar</button>
+            <button class="btnd" onclick="descriptografar()">
+              Descriptografar
+            </button>
+          </div>
         </div>
-        <div class="btn">
-          <button class="btnc" onclick="criptografar()">Criptografar</button>
-          <button class="btnd" onclick="descriptografar()">Descriptografar</button>
+        <div class="resultado-container">
+          <div class="resultado">
+            <div class="resultado-imagem">
+              <img src="assets/High quality products 1 1.svg" alt="" />
+              <h2>Nenhuma mensagem encontrada</h2>
+              <p>
+                Digite um texto que você deseja criptografar ou descriptografar.
+              </p>
+            </div>
+          </div>
+          <div class="botao-container">
+            <button class="copiar" onclick="copiar()">Copiar</button>
+          </div>
         </div>
       </div>
-      <div class="resultado">
-        <div class="resultado-imagem">
-          <img src="assets/High quality products 1 1.svg" alt="">
-          <h2>Nenhuma mensagem encontrada</h2>
-          <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-        </div>
-      </div>
+      <footer>Davidson Pacifico &copy; 2024</footer>
     </div>
     <script src="script.js"></script>
   </body>
