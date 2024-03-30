@@ -1,6 +1,16 @@
+const verificarTexto = (texto) => {
+  const regex = /^[a-z\u00E0-\u00FC\s]+$/;
+  return regex.test(texto);
+};
+
 const criptografar = () => {
   let textCriptografia = document.getElementById("criptografar-text");
   let text = textCriptografia.value;
+
+  if (!verificarTexto(text)) {
+    alert("Por favor, digite apenas letras minúsculas e sem acento.");
+    return;
+  }
 
   let nenhumaMensagem = document.querySelector(".resultado");
   nenhumaMensagem.removeChild(nenhumaMensagem.lastChild);
@@ -19,12 +29,16 @@ const descriptografar = () => {
   let textDescriptografia = document.getElementById("criptografar-text");
   let text = textDescriptografia.value;
 
+  if (!verificarTexto(text)) {
+    alert("Por favor, digite apenas letras minúsculas e sem acento.");
+    return;
+  }
+
   text = text.replace(/enter/g, "e");
   text = text.replace(/imes/g, "i");
   text = text.replace(/ober/g, "o");
   text = text.replace(/ufat/g, "u");
   text = text.replace(/ai/g, "a");
-
   nenhumaMensagem.innerHTML = text;
   nenhumaMensagem.appendChild(button);
 };
@@ -39,5 +53,6 @@ const copiar = () => {
   tempInput.setSelectionRange(0, 99999);
   document.execCommand("copy");
   document.body.removeChild(tempInput);
+  text = '';
   alert("Texto copiado para a área de transferência!");
 };
